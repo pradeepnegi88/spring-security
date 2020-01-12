@@ -27,8 +27,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .anyRequest().access(SECURED_READ_SCOPE);*/
         http.authorizeRequests().antMatchers("/h2/**").permitAll();
         http.headers().frameOptions().disable();
-//
-//        http.antMatcher("/student")
-//                .authorizeRequests().anyRequest().authenticated();
+
+        http.antMatcher("/student")
+                .authorizeRequests().anyRequest().authenticated();
     }
 }
