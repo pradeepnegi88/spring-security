@@ -29,18 +29,18 @@ public class StudentService {
              return    studentRepository.findAll();
     }
 
-    /**
-     * set up a default user with two roles USER and ADMIN
-     */
-    @PostConstruct
-    private void setupDefaultUser() {
-        System.out.println("*******************************setupDefaultUser"  );
-
-        if (studentRepository.count() == 0) {
-            studentRepository.save(new Student(2,"admin2",
-                 "admin2",
-                    Arrays.asList(new UserRole("USER"), new UserRole("ADMIN"))));
-        }
-    }
+//    /**
+//     * set up a default user with two roles USER and ADMIN
+//     */
+//    @PostConstruct
+//    private void setupDefaultUser() {
+//        System.out.println("*******************************setupDefaultUser"  );
+//
+//        if (studentRepository.count() == 0) {
+//            studentRepository.save(new Student(2,"admin2",
+//                 "admin2",
+//                    Arrays.asList(new UserRole("USER"), new UserRole("ADMIN"))));
+//        }
+//    }
 
 }
